@@ -103,14 +103,11 @@ def read_graph(file):
         if line[0] == 'n':
             names[int(line[2])] = line[4]
     for each in names:
-        for line in lines:
-            if line[0] == 'e':
-                if each not in adj:
-                    adj[each] = [line[4]]
-                elif each in adj:
-                    temp = adj[each]
-                    temp.append(line[4])
-                    adj[each] = temp
+        adj[each] = []
+    for line in lines:
+        if line[0] == 'e':
+            adj[int(line[2])].append(line[4])
+            
     fp.close
     return adj, names
 
