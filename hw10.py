@@ -1,4 +1,4 @@
-#Math 260 Homework 9
+#Math 260 Homework 10
 #author: Max Wang
 
 import matplotlib.pyplot as plt
